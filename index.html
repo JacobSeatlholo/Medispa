@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Cape Town Medi-Spa — Your Wellness Building</title>
-<meta name="description" content="Cape Town's connected wellness building. Book doctors, therapists, Pilates, skin & beauty, and more — all under one roof.">
+<meta name="description" content="Cape Town's connected wellness building. Book doctors, therapists, Pilates, skin & beauty, and more — all under one roof at 99 Kloof Street.">
 <meta property="og:title" content="Cape Town Medi-Spa">
 <meta property="og:description" content="Ubuntu Wellness · High Intensity Pilates · Raydiance Skin & Beauty · Hiatus Cape Town · Thread & Shape Brow Bar and more.">
 <meta property="og:type" content="website">
@@ -13,23 +13,12 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 :root {
-  --copper: #B5703A;
-  --copper-light: #D4967A;
-  --copper-pale: #F0DDD0;
-  --charcoal: #1A1A1A;
-  --charcoal-soft: #2C2C2C;
-  --warm-white: #FDFAF7;
-  --bone: #F4EFE8;
-  --bone-dark: #E5DDD2;
-  --text-muted: #7A7570;
-  --floor-0: #1A1A1A;
-  --floor-1: #B5703A;
-  --floor-2: #6B8F7A;
-  --floor-3: #7A6B8A;
-  --border: rgba(181,112,58,0.18);
-  --border-dark: rgba(181,112,58,0.35);
-  --radius: 3px;
-  --radius-lg: 6px;
+  --copper:#B5703A;--copper-light:#D4967A;--copper-pale:#F0DDD0;
+  --charcoal:#1A1A1A;--warm-white:#FDFAF7;--bone:#F4EFE8;--bone-dark:#E5DDD2;
+  --text-muted:#7A7570;
+  --fl0:#5A7D6E;--fl1:#B5703A;--fl2:#1A1A1A;
+  --border:rgba(181,112,58,0.18);--border-dark:rgba(181,112,58,0.32);
+  --radius:3px;--radius-lg:6px;
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
@@ -38,11 +27,9 @@ body{background:var(--warm-white);color:var(--charcoal);font-family:'DM Sans',sa
 /* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(253,250,247,0.94);backdrop-filter:blur(14px);border-bottom:0.5px solid var(--border);padding:0 2rem}
 .nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:68px}
-.nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none}
-.nav-logo-img{height:36px;width:auto}
-.nav-logo-fallback{display:flex;flex-direction:column;line-height:1}
-.nav-logo-top{font-size:0.6rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--charcoal);font-family:'DM Sans',sans-serif;font-weight:400}
-.nav-logo-bottom{font-size:1.05rem;letter-spacing:0.04em;color:var(--charcoal);font-family:'Cormorant Garamond',serif;font-weight:400}
+.nav-logo{text-decoration:none}
+.nav-logo-top{font-size:0.58rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--charcoal);display:block;font-weight:400}
+.nav-logo-bottom{font-size:1.05rem;color:var(--charcoal);font-family:'Cormorant Garamond',serif;font-weight:400;display:block;line-height:1.1}
 .nav-logo-bottom em{font-style:italic;color:var(--copper)}
 .nav-links{display:flex;gap:2rem;list-style:none;align-items:center}
 .nav-links a{font-size:0.78rem;letter-spacing:0.07em;text-transform:uppercase;color:var(--text-muted);text-decoration:none;transition:color 0.2s}
@@ -54,8 +41,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(253,250,247,
 
 /* HERO */
 .hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:120px 2rem 80px;max-width:1200px;margin:0 auto;gap:5rem}
-.hero-eyebrow{font-size:0.7rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--copper);margin-bottom:1.5rem;font-weight:400}
-.hero-title{font-family:'Cormorant Garamond',serif;font-size:clamp(3rem,5vw,5rem);font-weight:300;line-height:1.05;color:var(--charcoal);margin-bottom:1.5rem}
+.hero-eyebrow{font-size:0.7rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--copper);margin-bottom:1.5rem}
+.hero-title{font-family:'Cormorant Garamond',serif;font-size:clamp(3rem,5vw,5rem);font-weight:300;line-height:1.05;margin-bottom:1.5rem}
 .hero-title em{font-style:italic;color:var(--copper)}
 .hero-sub{font-size:0.95rem;color:var(--text-muted);line-height:1.85;max-width:420px;margin-bottom:2.5rem}
 .hero-actions{display:flex;gap:1rem;flex-wrap:wrap}
@@ -63,35 +50,35 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(253,250,247,
 .btn-primary:hover{background:var(--copper)}
 .btn-outline{background:transparent;color:var(--charcoal);padding:0.85rem 2rem;border-radius:var(--radius);font-size:0.82rem;letter-spacing:0.07em;text-decoration:none;border:1.5px solid var(--charcoal);cursor:pointer;font-family:'DM Sans',sans-serif;transition:0.2s;display:inline-block}
 .btn-outline:hover{background:var(--charcoal);color:var(--warm-white)}
+
+/* BUILDING VISUAL */
 .hero-visual{display:flex;flex-direction:column;gap:0}
-.hero-logo-block{background:var(--charcoal);border-radius:var(--radius-lg) var(--radius-lg) 0 0;padding:2rem 2rem 1.5rem;display:flex;align-items:center;justify-content:center}
-.hero-logo-block img{height:56px;width:auto;filter:brightness(1)}
-.hero-logo-text{color:white;text-align:center}
-.hero-logo-text .top{font-size:0.62rem;letter-spacing:0.3em;text-transform:uppercase;color:rgba(255,255,255,0.55);margin-bottom:0.2rem}
-.hero-logo-text .main{font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:300;line-height:1}
+.hero-logo-block{background:var(--charcoal);border-radius:var(--radius-lg) var(--radius-lg) 0 0;padding:1.75rem 2rem;text-align:center}
+.hero-logo-text .top{font-size:0.62rem;letter-spacing:0.3em;text-transform:uppercase;color:rgba(255,255,255,0.45);margin-bottom:0.2rem}
+.hero-logo-text .main{font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:300;color:white;line-height:1}
 .hero-logo-text .main em{font-style:italic;color:var(--copper-light)}
-.building-strip{background:var(--bone);border-radius:0 0 var(--radius-lg) var(--radius-lg);overflow:hidden;border:0.5px solid var(--border)}
+.building-strip{border-radius:0 0 var(--radius-lg) var(--radius-lg);overflow:hidden;border:0.5px solid var(--border-dark)}
 .floor-row{display:flex;align-items:stretch;border-bottom:0.5px solid var(--border);cursor:pointer;transition:background 0.15s}
 .floor-row:last-child{border-bottom:none}
 .floor-row:hover{background:var(--copper-pale)}
-.floor-row-label{width:5px;flex-shrink:0}
-.fl-0{background:var(--floor-0)} .fl-1{background:var(--floor-1)} .fl-2{background:var(--floor-2)} .fl-3{background:var(--floor-3)}
-.floor-row-body{padding:0.85rem 1.25rem;flex:1}
-.floor-row-name{font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-muted);margin-bottom:0.2rem;font-weight:500}
-.floor-row-tenants{font-size:0.85rem;color:var(--charcoal);line-height:1.4}
+.floor-row-bar{width:5px;flex-shrink:0}
+.fb0{background:var(--fl0)}.fb1{background:var(--fl1)}.fb2{background:var(--fl2)}
+.floor-row-body{padding:0.8rem 1.2rem;flex:1;background:var(--bone)}
+.floor-row-name{font-size:0.68rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-muted);margin-bottom:0.2rem;font-weight:500}
+.floor-row-tenants{font-size:0.82rem;color:var(--charcoal);line-height:1.4}
 
 /* STATS */
 .stats-bar{background:var(--charcoal);padding:2rem}
 .stats-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:2rem}
 .stat-item{text-align:center}
 .stat-num{font-family:'Cormorant Garamond',serif;font-size:2.4rem;font-weight:300;color:var(--copper-light);display:block;line-height:1}
-.stat-label{font-size:0.72rem;color:rgba(253,250,247,0.4);letter-spacing:0.1em;text-transform:uppercase;margin-top:0.4rem}
+.stat-label{font-size:0.7rem;color:rgba(253,250,247,0.38);letter-spacing:0.1em;text-transform:uppercase;margin-top:0.35rem}
 
 /* SECTIONS */
 section{padding:6rem 2rem}
 .section-inner{max-width:1200px;margin:0 auto}
-.section-eyebrow{font-size:0.68rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--copper);margin-bottom:0.75rem;font-weight:400}
-.section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,3.5vw,2.8rem);font-weight:300;line-height:1.15;color:var(--charcoal);margin-bottom:1.25rem}
+.section-eyebrow{font-size:0.68rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--copper);margin-bottom:0.75rem}
+.section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,3.5vw,2.8rem);font-weight:300;line-height:1.15;margin-bottom:1.25rem}
 .section-sub{font-size:0.92rem;color:var(--text-muted);max-width:540px;line-height:1.85}
 .section-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:3rem;flex-wrap:wrap;gap:1.5rem}
 
@@ -101,58 +88,58 @@ section{padding:6rem 2rem}
 .filter-btn:hover{border-color:var(--copper);color:var(--copper)}
 .filter-btn.active{background:var(--charcoal);color:var(--warm-white);border-color:var(--charcoal)}
 
-/* PRACTITIONER CARDS */
-.practitioners-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:1.25rem}
+/* CARDS */
+.prac-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(265px,1fr));gap:1.2rem}
 .prac-card{background:var(--warm-white);border:0.5px solid var(--border-dark);border-radius:var(--radius-lg);overflow:hidden;transition:box-shadow 0.25s,transform 0.25s;cursor:pointer}
 .prac-card:hover{box-shadow:0 10px 28px rgba(0,0,0,0.07);transform:translateY(-2px)}
-.prac-card-top{padding:1.4rem 1.4rem 1rem;border-bottom:0.5px solid var(--border)}
-.prac-avatar{width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:400;margin-bottom:0.9rem;color:white;font-style:italic}
-.av-dark{background:var(--charcoal)} .av-copper{background:var(--copper)} .av-green{background:var(--floor-2)} .av-purple{background:var(--floor-3)}
-.prac-floor-tag{font-size:0.65rem;letter-spacing:0.14em;text-transform:uppercase;font-weight:500;margin-bottom:0.3rem;color:var(--copper)}
-.prac-name{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:400;color:var(--charcoal);margin-bottom:0.15rem}
-.prac-title{font-size:0.78rem;color:var(--text-muted)}
-.prac-card-body{padding:1rem 1.4rem}
-.prac-tags{display:flex;flex-wrap:wrap;gap:0.35rem;margin-bottom:0.9rem}
-.tag{font-size:0.7rem;padding:0.22rem 0.6rem;border-radius:20px;background:var(--bone);color:var(--text-muted)}
-.prac-meta{display:flex;justify-content:space-between;align-items:center;margin-bottom:0.9rem}
-.prac-avail{font-size:0.75rem;color:var(--floor-2);font-weight:500}
-.prac-rate{font-size:0.8rem;color:var(--charcoal);font-weight:500}
-.btn-book{width:100%;background:var(--charcoal);color:var(--warm-white);border:none;padding:0.6rem;border-radius:var(--radius);font-size:0.8rem;letter-spacing:0.06em;cursor:pointer;transition:background 0.2s;font-family:'DM Sans',sans-serif}
+.prac-top{padding:1.3rem 1.3rem 0.9rem;border-bottom:0.5px solid var(--border)}
+.prac-av{width:50px;height:50px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:400;margin-bottom:0.85rem;color:white;font-style:italic}
+.av0{background:var(--fl0)}.av1{background:var(--fl1)}.av2{background:var(--fl2)}
+.prac-ftag{font-size:0.64rem;letter-spacing:0.14em;text-transform:uppercase;font-weight:500;margin-bottom:0.28rem;color:var(--copper)}
+.prac-name{font-family:'Cormorant Garamond',serif;font-size:1.22rem;font-weight:400;margin-bottom:0.12rem}
+.prac-title{font-size:0.76rem;color:var(--text-muted)}
+.prac-body{padding:0.95rem 1.3rem}
+.tags{display:flex;flex-wrap:wrap;gap:0.32rem;margin-bottom:0.85rem}
+.tag{font-size:0.68rem;padding:0.2rem 0.55rem;border-radius:20px;background:var(--bone);color:var(--text-muted)}
+.prac-meta{display:flex;justify-content:space-between;align-items:center;margin-bottom:0.85rem}
+.prac-avail{font-size:0.73rem;color:var(--fl0);font-weight:500}
+.prac-rate{font-size:0.78rem;font-weight:500}
+.btn-book{width:100%;background:var(--charcoal);color:var(--warm-white);border:none;padding:0.58rem;border-radius:var(--radius);font-size:0.78rem;letter-spacing:0.06em;cursor:pointer;transition:background 0.2s;font-family:'DM Sans',sans-serif}
 .btn-book:hover{background:var(--copper)}
 
-/* FLOORS DEEP */
+/* FLOORS TABS */
 .floors-section{background:var(--bone)}
-.floors-tabs{display:flex;gap:0;border-bottom:1px solid var(--border-dark);margin-bottom:3rem;overflow-x:auto}
-.floor-tab{padding:1rem 1.75rem;font-size:0.78rem;letter-spacing:0.09em;text-transform:uppercase;cursor:pointer;color:var(--text-muted);border-bottom:2px solid transparent;background:none;border-top:none;border-left:none;border-right:none;font-family:'DM Sans',sans-serif;white-space:nowrap;transition:0.2s}
+.floors-tabs{display:flex;border-bottom:1px solid var(--border-dark);margin-bottom:3rem;overflow-x:auto}
+.floor-tab{padding:0.9rem 1.6rem;font-size:0.76rem;letter-spacing:0.09em;text-transform:uppercase;cursor:pointer;color:var(--text-muted);border-bottom:2px solid transparent;background:none;border-top:none;border-left:none;border-right:none;font-family:'DM Sans',sans-serif;white-space:nowrap;transition:0.2s}
 .floor-tab.active{color:var(--charcoal);border-bottom-color:var(--copper)}
 .floor-content{display:none}
 .floor-content.active{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
-.floor-badge{display:inline-block;padding:0.35rem 0.9rem;border-radius:20px;font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;font-weight:500;margin-bottom:1.25rem;color:white;background:var(--copper)}
-.floor-detail h2{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:300;color:var(--charcoal);margin-bottom:0.9rem;line-height:1.2}
-.floor-detail p{font-size:0.9rem;color:var(--text-muted);line-height:1.85;margin-bottom:1.25rem}
-.floor-features{list-style:none;display:flex;flex-direction:column;gap:0.6rem;margin-bottom:1.75rem}
-.floor-features li{display:flex;align-items:flex-start;gap:0.7rem;font-size:0.86rem;color:var(--charcoal)}
-.feat-dot{width:5px;height:5px;border-radius:50%;background:var(--copper);flex-shrink:0;margin-top:0.55rem}
-.floor-panel{background:var(--warm-white);border-radius:var(--radius-lg);padding:1.75rem;border:0.5px solid var(--border-dark)}
-.panel-title{font-size:0.7rem;letter-spacing:0.13em;text-transform:uppercase;color:var(--text-muted);margin-bottom:1.1rem;font-weight:500}
-.service-list{list-style:none}
-.service-item{display:flex;justify-content:space-between;align-items:center;padding:0.8rem 0;border-bottom:0.5px solid var(--border);font-size:0.86rem}
-.service-item:last-child{border-bottom:none}
-.service-price{color:var(--text-muted);font-size:0.78rem}
+.floor-badge{display:inline-block;padding:0.32rem 0.85rem;border-radius:20px;font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;font-weight:500;margin-bottom:1.2rem;color:white}
+.floor-detail h2{font-family:'Cormorant Garamond',serif;font-size:1.95rem;font-weight:300;margin-bottom:0.85rem;line-height:1.2}
+.floor-detail p{font-size:0.88rem;color:var(--text-muted);line-height:1.85;margin-bottom:1.1rem}
+.floor-feats{list-style:none;display:flex;flex-direction:column;gap:0.55rem;margin-bottom:1.6rem}
+.floor-feats li{display:flex;align-items:flex-start;gap:0.65rem;font-size:0.85rem}
+.fdot{width:5px;height:5px;border-radius:50%;background:var(--copper);flex-shrink:0;margin-top:0.56rem}
+.floor-panel{background:var(--warm-white);border-radius:var(--radius-lg);padding:1.6rem;border:0.5px solid var(--border-dark)}
+.panel-title{font-size:0.68rem;letter-spacing:0.13em;text-transform:uppercase;color:var(--text-muted);margin-bottom:1rem;font-weight:500}
+.svc-list{list-style:none}
+.svc-item{display:flex;justify-content:space-between;align-items:center;padding:0.75rem 0;border-bottom:0.5px solid var(--border);font-size:0.84rem}
+.svc-item:last-child{border-bottom:none}
+.svc-price{color:var(--text-muted);font-size:0.76rem}
 
-/* CLASS SCHEDULE */
-.schedule-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:0.65rem}
-.day-col h4{font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-muted);margin-bottom:0.65rem;font-weight:500}
-.class-slot{background:var(--bone);border-radius:var(--radius);padding:0.8rem;margin-bottom:0.45rem;cursor:pointer;transition:0.2s;border:0.5px solid transparent}
-.class-slot:hover{border-color:var(--copper);background:white}
-.class-slot.full{opacity:0.45;cursor:default}
-.class-slot.full:hover{border-color:transparent;background:var(--bone)}
-.class-time{font-size:0.7rem;color:var(--copper);font-weight:500;margin-bottom:0.2rem}
-.class-name{font-size:0.8rem;color:var(--charcoal);font-weight:500;margin-bottom:0.12rem}
-.class-instructor{font-size:0.7rem;color:var(--text-muted)}
-.class-spots{font-size:0.66rem;margin-top:0.35rem;color:var(--text-muted)}
-.spots-bar{height:3px;background:var(--bone-dark);border-radius:2px;margin-top:0.25rem;overflow:hidden}
-.spots-fill{height:100%;background:var(--floor-2);border-radius:2px}
+/* SCHEDULE */
+.sched-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:0.65rem}
+.day-col h4{font-size:0.68rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-muted);margin-bottom:0.6rem;font-weight:500}
+.cls-slot{background:var(--bone);border-radius:var(--radius);padding:0.75rem;margin-bottom:0.4rem;cursor:pointer;transition:0.2s;border:0.5px solid transparent}
+.cls-slot:hover{border-color:var(--copper);background:white}
+.cls-slot.full{opacity:0.42;cursor:default}
+.cls-slot.full:hover{border-color:transparent;background:var(--bone)}
+.cls-time{font-size:0.68rem;color:var(--copper);font-weight:500;margin-bottom:0.18rem}
+.cls-name{font-size:0.78rem;font-weight:500;margin-bottom:0.1rem}
+.cls-instr{font-size:0.68rem;color:var(--text-muted)}
+.cls-spots{font-size:0.64rem;margin-top:0.32rem;color:var(--text-muted)}
+.spots-bar{height:3px;background:var(--bone-dark);border-radius:2px;margin-top:0.22rem;overflow:hidden}
+.spots-fill{height:100%;background:var(--fl0);border-radius:2px}
 .spots-fill.near{background:var(--copper)}
 .spots-fill.gone{background:#B03030}
 
@@ -160,95 +147,97 @@ section{padding:6rem 2rem}
 .pitch-section{background:var(--charcoal)}
 .pitch-section .section-eyebrow{color:var(--copper-light)}
 .pitch-section .section-title{color:var(--warm-white)}
-.pitch-section .section-sub{color:rgba(253,250,247,0.5)}
-.pitch-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:2.5rem}
-.pitch-card{border:0.5px solid rgba(181,112,58,0.25);border-radius:var(--radius-lg);padding:1.75rem;transition:border-color 0.2s}
+.pitch-section .section-sub{color:rgba(253,250,247,0.45)}
+.pitch-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:2.5rem}
+.pitch-card{border:0.5px solid rgba(181,112,58,0.22);border-radius:var(--radius-lg);padding:1.6rem;transition:border-color 0.2s}
 .pitch-card:hover{border-color:var(--copper)}
-.pitch-icon{font-size:1.4rem;margin-bottom:1rem}
-.pitch-card h3{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:400;margin-bottom:0.6rem;color:var(--warm-white)}
-.pitch-card p{font-size:0.83rem;color:rgba(253,250,247,0.45);line-height:1.75}
-.pitch-cta{margin-top:2.5rem;background:rgba(181,112,58,0.08);border-radius:var(--radius-lg);padding:2.25rem;border:0.5px solid rgba(181,112,58,0.3);display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:center}
-.pitch-cta h3{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:300;margin-bottom:0.4rem;color:var(--warm-white)}
-.pitch-cta p{font-size:0.83rem;color:rgba(253,250,247,0.45)}
+.pitch-icon{font-size:1.3rem;margin-bottom:0.9rem}
+.pitch-card h3{font-family:'Cormorant Garamond',serif;font-size:1.22rem;font-weight:400;margin-bottom:0.55rem;color:var(--warm-white)}
+.pitch-card p{font-size:0.81rem;color:rgba(253,250,247,0.42);line-height:1.75}
+.pitch-cta{margin-top:2.5rem;background:rgba(181,112,58,0.08);border-radius:var(--radius-lg);padding:2.1rem;border:0.5px solid rgba(181,112,58,0.28);display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:center}
+.pitch-cta h3{font-family:'Cormorant Garamond',serif;font-size:1.45rem;font-weight:300;margin-bottom:0.35rem;color:var(--warm-white)}
+.pitch-cta p{font-size:0.81rem;color:rgba(253,250,247,0.42)}
 .btn-copper{background:var(--copper);color:white;padding:0.85rem 2rem;border-radius:var(--radius);font-size:0.82rem;letter-spacing:0.07em;border:none;cursor:pointer;white-space:nowrap;font-family:'DM Sans',sans-serif;transition:background 0.2s;text-decoration:none;display:inline-block}
 .btn-copper:hover{background:var(--copper-light);color:var(--charcoal)}
 
-/* DASHBOARD MOCKUP */
+/* PORTAL */
 .portal-section{background:var(--bone)}
 .portal-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
-.portal-feats{display:flex;flex-direction:column;gap:1.1rem;margin-top:1.75rem}
-.portal-feat{display:flex;gap:1rem;align-items:flex-start}
-.portal-feat-icon{width:34px;height:34px;border-radius:var(--radius);background:var(--copper);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:white;font-size:0.9rem}
-.portal-feat h4{font-size:0.88rem;font-weight:500;color:var(--charcoal);margin-bottom:0.15rem}
-.portal-feat p{font-size:0.8rem;color:var(--text-muted);line-height:1.6}
+.portal-feats{display:flex;flex-direction:column;gap:1rem;margin-top:1.6rem}
+.portal-feat{display:flex;gap:0.9rem;align-items:flex-start}
+.portal-feat-icon{width:32px;height:32px;border-radius:var(--radius);background:var(--copper);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:white;font-size:0.85rem}
+.portal-feat h4{font-size:0.86rem;font-weight:500;margin-bottom:0.12rem}
+.portal-feat p{font-size:0.78rem;color:var(--text-muted);line-height:1.6}
 .db-mock{background:var(--warm-white);border-radius:var(--radius-lg);border:0.5px solid var(--border-dark);overflow:hidden;box-shadow:0 12px 40px rgba(0,0,0,0.07)}
-.db-bar{background:var(--charcoal);padding:0.7rem 1.25rem;display:flex;align-items:center;gap:6px}
+.db-bar{background:var(--charcoal);padding:0.65rem 1.1rem;display:flex;align-items:center;gap:5px}
 .db-dot{width:10px;height:10px;border-radius:50%}
-.db-bar span{font-size:0.7rem;color:rgba(253,250,247,0.35);margin-left:6px;letter-spacing:0.05em}
-.db-body{padding:1.4rem}
-.db-metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:0.65rem;margin-bottom:1rem}
-.db-met{background:var(--bone);border-radius:var(--radius);padding:0.7rem;text-align:center}
-.db-met-n{font-family:'Cormorant Garamond',serif;font-size:1.45rem;color:var(--charcoal);line-height:1}
-.db-met-l{font-size:0.65rem;color:var(--text-muted);margin-top:0.15rem}
-.db-lbl{font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-muted);margin-bottom:0.65rem}
-.db-row{display:flex;justify-content:space-between;align-items:center;padding:0.55rem 0;border-bottom:0.5px solid var(--border);font-size:0.78rem}
+.db-bar span{font-size:0.68rem;color:rgba(253,250,247,0.3);margin-left:6px;letter-spacing:0.05em}
+.db-body{padding:1.3rem}
+.db-metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:0.6rem;margin-bottom:1rem}
+.db-met{background:var(--bone);border-radius:var(--radius);padding:0.65rem;text-align:center}
+.db-met-n{font-family:'Cormorant Garamond',serif;font-size:1.4rem;line-height:1}
+.db-met-l{font-size:0.63rem;color:var(--text-muted);margin-top:0.12rem}
+.db-lbl{font-size:0.65rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-muted);margin-bottom:0.6rem}
+.db-row{display:flex;justify-content:space-between;align-items:center;padding:0.52rem 0;border-bottom:0.5px solid var(--border);font-size:0.76rem}
 .db-row:last-child{border-bottom:none}
-.db-badge{font-size:0.63rem;padding:0.18rem 0.48rem;border-radius:20px;background:rgba(107,143,122,0.12);color:var(--floor-2)}
-.db-badge.pend{background:rgba(181,112,58,0.12);color:var(--copper)}
+.db-bdg{font-size:0.61rem;padding:0.16rem 0.44rem;border-radius:20px;background:rgba(90,125,110,0.12);color:var(--fl0)}
+.db-bdg.pend{background:rgba(181,112,58,0.12);color:var(--copper)}
 
 /* CONTACT */
 .contact-section{background:var(--warm-white)}
 .contact-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:4rem}
-.contact-info h2{font-family:'Cormorant Garamond',serif;font-size:1.9rem;font-weight:300;color:var(--charcoal);margin-bottom:0.9rem;line-height:1.2}
-.contact-info p{font-size:0.88rem;color:var(--text-muted);line-height:1.85;margin-bottom:1.25rem}
-.cdet{display:flex;gap:0.75rem;margin-bottom:0.65rem;align-items:flex-start}
-.cdet-icon{width:30px;height:30px;border-radius:var(--radius);background:var(--bone);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:0.85rem}
-.cdet-text{font-size:0.84rem;color:var(--charcoal)}
-.cdet-text span{display:block;font-size:0.73rem;color:var(--text-muted)}
-.contact-form{display:flex;flex-direction:column;gap:1rem}
-.form-group{margin-bottom:0}
-.form-label{display:block;font-size:0.72rem;letter-spacing:0.09em;text-transform:uppercase;color:var(--text-muted);margin-bottom:0.45rem;font-weight:500}
-.form-input{width:100%;border:1px solid var(--border-dark);border-radius:var(--radius);padding:0.72rem 0.9rem;font-size:0.88rem;color:var(--charcoal);background:white;font-family:'DM Sans',sans-serif;transition:border-color 0.2s}
+.contact-info h2{font-family:'Cormorant Garamond',serif;font-size:1.85rem;font-weight:300;margin-bottom:0.85rem;line-height:1.2}
+.contact-info p{font-size:0.87rem;color:var(--text-muted);line-height:1.85;margin-bottom:1.2rem}
+.cdet{display:flex;gap:0.7rem;margin-bottom:0.6rem;align-items:flex-start}
+.cdet-icon{width:30px;height:30px;border-radius:var(--radius);background:var(--bone);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:0.82rem}
+.cdet-text{font-size:0.83rem}
+.cdet-text span{display:block;font-size:0.72rem;color:var(--text-muted)}
+.contact-form{display:flex;flex-direction:column;gap:0.95rem}
+.form-label{display:block;font-size:0.7rem;letter-spacing:0.09em;text-transform:uppercase;color:var(--text-muted);margin-bottom:0.4rem;font-weight:500}
+.form-input{width:100%;border:1px solid var(--border-dark);border-radius:var(--radius);padding:0.7rem 0.88rem;font-size:0.87rem;color:var(--charcoal);background:white;font-family:'DM Sans',sans-serif;transition:border-color 0.2s}
 .form-input:focus{outline:none;border-color:var(--copper)}
-.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:0.95rem}
 
 /* FOOTER */
-footer{background:var(--charcoal);padding:3rem 2rem}
+footer{background:var(--charcoal);padding:3.5rem 2rem 2rem}
 .footer-inner{max-width:1200px;margin:0 auto}
-.footer-top{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:2rem;margin-bottom:2rem;padding-bottom:2rem;border-bottom:0.5px solid rgba(253,250,247,0.1)}
-.footer-brand-name{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:300;color:var(--warm-white);margin-bottom:0.4rem}
+.footer-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:3rem;padding-bottom:2.5rem;border-bottom:0.5px solid rgba(253,250,247,0.08);margin-bottom:2rem}
+.footer-brand-name{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:300;color:var(--warm-white);margin-bottom:0.5rem}
 .footer-brand-name em{font-style:italic;color:var(--copper-light)}
-.footer-tagline{font-size:0.75rem;color:rgba(253,250,247,0.3);letter-spacing:0.06em}
-.footer-links-col h5{font-size:0.68rem;letter-spacing:0.14em;text-transform:uppercase;color:rgba(253,250,247,0.3);margin-bottom:0.75rem;font-weight:500}
-.footer-links-col a{display:block;font-size:0.8rem;color:rgba(253,250,247,0.45);text-decoration:none;margin-bottom:0.4rem;transition:color 0.2s}
-.footer-links-col a:hover{color:var(--copper-light)}
+.footer-brand-desc{font-size:0.76rem;color:rgba(253,250,247,0.32);line-height:1.7;margin-bottom:1rem}
+.footer-address{font-size:0.76rem;color:rgba(253,250,247,0.35);line-height:1.7}
+.footer-address strong{color:rgba(253,250,247,0.55);font-weight:500}
+.footer-col h5{font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:rgba(253,250,247,0.28);margin-bottom:0.8rem;font-weight:500}
+.footer-col a{display:block;font-size:0.78rem;color:rgba(253,250,247,0.42);text-decoration:none;margin-bottom:0.38rem;transition:color 0.2s}
+.footer-col a:hover{color:var(--copper-light)}
 .footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
-.footer-copy{font-size:0.72rem;color:rgba(253,250,247,0.25)}
-.footer-powered{font-size:0.7rem;color:rgba(253,250,247,0.2)}
+.footer-copy{font-size:0.7rem;color:rgba(253,250,247,0.22)}
+.footer-madeby{font-size:0.7rem;color:rgba(253,250,247,0.22);display:flex;align-items:center;gap:0.4rem}
+.footer-madeby a{color:rgba(181,112,58,0.6);text-decoration:none;transition:color 0.2s}
+.footer-madeby a:hover{color:var(--copper-light)}
 
 /* MODAL */
 .modal-overlay{display:none;position:fixed;inset:0;background:rgba(26,26,26,0.65);z-index:200;align-items:center;justify-content:center;padding:1rem}
 .modal-overlay.open{display:flex}
 .modal{background:var(--warm-white);border-radius:var(--radius-lg);width:100%;max-width:540px;max-height:90vh;overflow-y:auto}
-.modal-hdr{padding:1.75rem 1.75rem 1.25rem;border-bottom:0.5px solid var(--border);display:flex;justify-content:space-between;align-items:flex-start}
-.modal-hdr h2{font-family:'Cormorant Garamond',serif;font-size:1.7rem;font-weight:400}
-.modal-close{background:none;border:none;font-size:1.5rem;cursor:pointer;color:var(--text-muted);line-height:1}
-.modal-bdy{padding:1.75rem}
+.modal-hdr{padding:1.6rem 1.6rem 1.1rem;border-bottom:0.5px solid var(--border);display:flex;justify-content:space-between;align-items:flex-start}
+.modal-hdr h2{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:400}
+.modal-close{background:none;border:none;font-size:1.4rem;cursor:pointer;color:var(--text-muted)}
+.modal-bdy{padding:1.6rem}
 .step{display:none}.step.active{display:block}
-.step-dots{display:flex;gap:0.45rem;margin-bottom:1.75rem}
+.step-dots{display:flex;gap:0.42rem;margin-bottom:1.6rem}
 .sdot{width:8px;height:8px;border-radius:50%;background:var(--border-dark)}
-.sdot.done{background:var(--copper)}
-.sdot.cur{background:var(--charcoal);width:22px;border-radius:4px}
-.intake-note{background:var(--bone);border-radius:var(--radius);padding:0.9rem 1rem;font-size:0.8rem;color:var(--text-muted);margin-bottom:1.25rem;border-left:3px solid var(--copper)}
-.time-slots{display:grid;grid-template-columns:repeat(4,1fr);gap:0.45rem;margin-top:0.45rem}
-.tslot{padding:0.55rem 0.35rem;border:1px solid var(--border-dark);border-radius:var(--radius);font-size:0.76rem;text-align:center;cursor:pointer;background:white;color:var(--charcoal);transition:0.2s;font-family:'DM Sans',sans-serif}
+.sdot.done{background:var(--copper)}.sdot.cur{background:var(--charcoal);width:22px;border-radius:4px}
+.intake-note{background:var(--bone);border-radius:var(--radius);padding:0.85rem 1rem;font-size:0.78rem;color:var(--text-muted);margin-bottom:1.1rem;border-left:3px solid var(--copper)}
+.time-slots{display:grid;grid-template-columns:repeat(4,1fr);gap:0.42rem;margin-top:0.42rem}
+.tslot{padding:0.52rem 0.32rem;border:1px solid var(--border-dark);border-radius:var(--radius);font-size:0.74rem;text-align:center;cursor:pointer;background:white;transition:0.2s;font-family:'DM Sans',sans-serif}
 .tslot:hover{border-color:var(--copper);color:var(--copper)}
 .tslot.sel{background:var(--charcoal);color:white;border-color:var(--charcoal)}
-.tslot.na{opacity:0.28;cursor:not-allowed}
-.modal-ftr{padding:1.25rem 1.75rem;border-top:0.5px solid var(--border);display:flex;justify-content:space-between;align-items:center}
-.pay-badges{display:flex;gap:0.6rem}
-.pay-badge{font-size:0.67rem;padding:0.25rem 0.6rem;border:1px solid var(--border-dark);border-radius:var(--radius);color:var(--text-muted);font-weight:500}
-.modal-nav{display:flex;gap:0.65rem}
+.tslot.na{opacity:0.26;cursor:not-allowed}
+.modal-ftr{padding:1.1rem 1.6rem;border-top:0.5px solid var(--border);display:flex;justify-content:space-between;align-items:center}
+.pay-badges{display:flex;gap:0.55rem}
+.pay-badge{font-size:0.65rem;padding:0.22rem 0.55rem;border:1px solid var(--border-dark);border-radius:var(--radius);color:var(--text-muted);font-weight:500}
+.modal-nav{display:flex;gap:0.6rem}
 
 /* RESPONSIVE */
 @media(max-width:960px){
@@ -259,21 +248,22 @@ footer{background:var(--charcoal);padding:3rem 2rem}
   .pitch-grid{grid-template-columns:1fr 1fr}
   .portal-grid{grid-template-columns:1fr}
   .contact-grid{grid-template-columns:1fr}
-  .schedule-grid{grid-template-columns:repeat(2,1fr)}
+  .sched-grid{grid-template-columns:repeat(2,1fr)}
   .pitch-cta{grid-template-columns:1fr}
+  .footer-top{grid-template-columns:1fr 1fr}
   .nav-links{display:none}
   .hamburger{display:flex}
 }
 @media(max-width:600px){
   .stats-inner{grid-template-columns:repeat(2,1fr)}
   .pitch-grid{grid-template-columns:1fr}
-  .schedule-grid{grid-template-columns:1fr}
+  .sched-grid{grid-template-columns:1fr}
   section{padding:4rem 1.5rem}
-  .footer-top{flex-direction:column}
+  .footer-top{grid-template-columns:1fr}
 }
-.mobile-nav{display:none;position:fixed;top:68px;left:0;right:0;background:var(--warm-white);border-bottom:0.5px solid var(--border);padding:1.25rem 1.5rem;z-index:99;flex-direction:column;gap:0.9rem}
+.mobile-nav{display:none;position:fixed;top:68px;left:0;right:0;background:var(--warm-white);border-bottom:0.5px solid var(--border);padding:1.2rem 1.5rem;z-index:99;flex-direction:column;gap:0.85rem}
 .mobile-nav.open{display:flex}
-.mobile-nav a{font-size:0.88rem;color:var(--charcoal);text-decoration:none;padding:0.45rem 0;border-bottom:0.5px solid var(--border)}
+.mobile-nav a{font-size:0.88rem;color:var(--charcoal);text-decoration:none;padding:0.4rem 0;border-bottom:0.5px solid var(--border)}
 </style>
 </head>
 <body>
@@ -282,10 +272,8 @@ footer{background:var(--charcoal);padding:3rem 2rem}
 <nav>
   <div class="nav-inner">
     <a href="#" class="nav-logo">
-      <div class="nav-logo-fallback">
-        <span class="nav-logo-top">Cape Town</span>
-        <span class="nav-logo-bottom">Medi-<em>Spa</em></span>
-      </div>
+      <span class="nav-logo-top">Cape Town</span>
+      <span class="nav-logo-bottom">Medi-<em>Spa</em></span>
     </a>
     <ul class="nav-links">
       <li><a href="#directory">Directory</a></li>
@@ -311,9 +299,9 @@ footer{background:var(--charcoal);padding:3rem 2rem}
 <section style="padding:0">
 <div class="hero">
   <div>
-    <p class="hero-eyebrow">Cape Town · De Waterkant · Est. 2008</p>
+    <p class="hero-eyebrow">99 Kloof Street · Cape Town · Est. 2008</p>
     <h1 class="hero-title">Wellness,<br>Floor by <em>Floor</em></h1>
-    <p class="hero-sub">Fifteen practitioners. Four specialised floors. One address. From medical consultations to Pilates, skin therapy to mental wellness — everything you need is here.</p>
+    <p class="hero-sub">Nineteen practitioners. Three specialised floors. One address on Kloof Street. Medical care, beauty, movement, therapy — everything you need, all connected.</p>
     <div class="hero-actions">
       <a href="#directory" class="btn-primary">Find a Practitioner</a>
       <a href="#tenants" class="btn-outline">Become a Tenant</a>
@@ -327,32 +315,25 @@ footer{background:var(--charcoal);padding:3rem 2rem}
       </div>
     </div>
     <div class="building-strip">
-      <div class="floor-row" onclick="setTab(0)">
-        <div class="floor-row-label fl-0"></div>
+      <div class="floor-row" onclick="setTab(2)">
+        <div class="floor-row-bar fb2"></div>
         <div class="floor-row-body">
-          <div class="floor-row-name">Ground Floor — Medical &amp; Wellness</div>
-          <div class="floor-row-tenants">Dr D Geoffreys · Dr A Jenkin · Dr Jess Stanbridge · Ubuntu Wellness · Peter Jones</div>
+          <div class="floor-row-name">Top Floor — Movement &amp; Therapy</div>
+          <div class="floor-row-tenants">Peter Jones · High Intensity Pilates · Vyvyan Bean · Taryn Kelly · Rochelle · Trudy · Pam · Michelle · Yvonne · Wilscha</div>
         </div>
       </div>
       <div class="floor-row" onclick="setTab(1)">
-        <div class="floor-row-label fl-1"></div>
+        <div class="floor-row-bar fb1"></div>
         <div class="floor-row-body">
-          <div class="floor-row-name">First Floor — Skin, Beauty &amp; Aesthetics</div>
-          <div class="floor-row-tenants">Raydiance Skin &amp; Beauty · Thread &amp; Shape Brow Bar · Romy van Leeve · Romi Tollman</div>
+          <div class="floor-row-name">Middle Floor — Medical, Skin &amp; Beauty</div>
+          <div class="floor-row-tenants">Raydiance · Romy van Leeve · Romi Tollman · Thread &amp; Shape · Dr D Geoffreys · Dr A Jenkin · Dr Jess Stanbridge · Hiatus Cape Town · Linda Brash</div>
         </div>
       </div>
-      <div class="floor-row" onclick="setTab(2)">
-        <div class="floor-row-label fl-2"></div>
+      <div class="floor-row" onclick="setTab(0)">
+        <div class="floor-row-bar fb0"></div>
         <div class="floor-row-body">
-          <div class="floor-row-name">Second Floor — Movement &amp; Studio</div>
-          <div class="floor-row-tenants">High Intensity Pilates · Vyvyan Bean · Taryn Kelly</div>
-        </div>
-      </div>
-      <div class="floor-row" onclick="setTab(3)">
-        <div class="floor-row-label fl-3"></div>
-        <div class="floor-row-body">
-          <div class="floor-row-name">Third Floor — Therapy &amp; Wellness Suites</div>
-          <div class="floor-row-tenants">Rochelle · Trudy · Pam · Michelle · Yvonne · Wilscha · Linda Brash · Hiatus Cape Town</div>
+          <div class="floor-row-name">Ground Floor — Wellness &amp; Allied Health</div>
+          <div class="floor-row-tenants">Ubuntu Wellness · HS Physio · Dr Wendy · Just Hearing · Revive Studio</div>
         </div>
       </div>
     </div>
@@ -363,9 +344,9 @@ footer{background:var(--charcoal);padding:3rem 2rem}
 <!-- STATS -->
 <div class="stats-bar">
   <div class="stats-inner">
-    <div class="stat-item"><span class="stat-num">15+</span><div class="stat-label">Practitioners</div></div>
-    <div class="stat-item"><span class="stat-num">4</span><div class="stat-label">Specialised Floors</div></div>
-    <div class="stat-item"><span class="stat-num">1</span><div class="stat-label">Address, Cape Town</div></div>
+    <div class="stat-item"><span class="stat-num">19+</span><div class="stat-label">Practitioners</div></div>
+    <div class="stat-item"><span class="stat-num">3</span><div class="stat-label">Specialised Floors</div></div>
+    <div class="stat-item"><span class="stat-num">99</span><div class="stat-label">Kloof Street</div></div>
     <div class="stat-item"><span class="stat-num">R0</span><div class="stat-label">Setup Fee</div></div>
   </div>
 </div>
@@ -378,16 +359,15 @@ footer{background:var(--charcoal);padding:3rem 2rem}
       <p class="section-eyebrow">Building Directory</p>
       <h2 class="section-title">Find Your Practitioner</h2>
     </div>
-    <p class="section-sub" style="text-align:right;max-width:280px">All 15+ tenants in one place. Filter by specialty or browse the full building.</p>
+    <p class="section-sub" style="text-align:right;max-width:260px">All tenants at 99 Kloof Street. Filter by floor or browse all.</p>
   </div>
   <div class="filter-bar">
     <button class="filter-btn active" onclick="filterCards('all',this)">All Floors</button>
-    <button class="filter-btn" onclick="filterCards('0',this)">Ground — Medical</button>
-    <button class="filter-btn" onclick="filterCards('1',this)">First — Beauty</button>
-    <button class="filter-btn" onclick="filterCards('2',this)">Second — Movement</button>
-    <button class="filter-btn" onclick="filterCards('3',this)">Third — Therapy</button>
+    <button class="filter-btn" onclick="filterCards('0',this)">Ground — Wellness</button>
+    <button class="filter-btn" onclick="filterCards('1',this)">Middle — Medical &amp; Beauty</button>
+    <button class="filter-btn" onclick="filterCards('2',this)">Top — Movement &amp; Therapy</button>
   </div>
-  <div class="practitioners-grid" id="prac-grid"></div>
+  <div class="prac-grid" id="prac-grid"></div>
 </div>
 </section>
 
@@ -398,118 +378,96 @@ footer{background:var(--charcoal);padding:3rem 2rem}
   <h2 class="section-title">What Each Floor Offers</h2>
   <div class="floors-tabs">
     <button class="floor-tab active" onclick="switchTab(0,this)">Ground Floor</button>
-    <button class="floor-tab" onclick="switchTab(1,this)">First Floor</button>
-    <button class="floor-tab" onclick="switchTab(2,this)">Second Floor</button>
-    <button class="floor-tab" onclick="switchTab(3,this)">Third Floor</button>
+    <button class="floor-tab" onclick="switchTab(1,this)">Middle Floor</button>
+    <button class="floor-tab" onclick="switchTab(2,this)">Top Floor</button>
   </div>
 
+  <!-- GROUND -->
   <div class="floor-content active" id="ft-0">
     <div class="floor-detail">
-      <span class="floor-badge">Ground Floor</span>
-      <h2>Medical &amp; Wellness</h2>
-      <p>Our anchor floor brings together Dr D Geoffreys, Dr A Jenkin, and Dr Jess Stanbridge alongside Ubuntu Wellness and Peter Jones — creating a full-spectrum primary care and wellness environment.</p>
-      <p>Medical bookings include digitised intake forms completed before arrival, reducing waiting room time and giving your doctor full context on day one.</p>
-      <ul class="floor-features">
-        <li><span class="feat-dot"></span>GP &amp; specialist consultations — Drs Geoffreys, Jenkin &amp; Stanbridge</li>
-        <li><span class="feat-dot"></span>Ubuntu Wellness — holistic and integrative health</li>
-        <li><span class="feat-dot"></span>Digital patient intake forms pre-consultation</li>
-        <li><span class="feat-dot"></span>Medical aid billing assistance</li>
-        <li><span class="feat-dot"></span>In-building referral network across all four floors</li>
+      <span class="floor-badge" style="background:var(--fl0)">Ground Floor</span>
+      <h2>Wellness &amp; Allied Health</h2>
+      <p>The ground floor is your first point of contact — Ubuntu Wellness, HS Physio, Dr Wendy, Just Hearing, and Revive Studio form a comprehensive allied health and wellness hub at street level.</p>
+      <p>Walk in or book online. Digital intake forms are completed before arrival so you spend less time waiting and more time healing.</p>
+      <ul class="floor-feats">
+        <li><span class="fdot"></span>Ubuntu Wellness — integrative &amp; holistic health</li>
+        <li><span class="fdot"></span>HS Physio — physiotherapy &amp; rehabilitation</li>
+        <li><span class="fdot"></span>Dr Wendy — medical consultations</li>
+        <li><span class="fdot"></span>Just Hearing — audiology &amp; hearing care</li>
+        <li><span class="fdot"></span>Revive Studio — restorative wellness &amp; recovery</li>
       </ul>
-      <button class="btn-primary" onclick="openModal('Medical Consultation','Ground Floor','0')">Book Ground Floor</button>
+      <button class="btn-primary" onclick="openModal('Ground Floor Booking','Ground Floor','0')">Book Ground Floor</button>
     </div>
     <div class="floor-panel">
       <p class="panel-title">Services &amp; Rates</p>
-      <ul class="service-list">
-        <li class="service-item"><span>GP Consultation</span><span class="service-price">R650 · 30 min</span></li>
-        <li class="service-item"><span>Specialist Consult</span><span class="service-price">R1,200 · 45 min</span></li>
-        <li class="service-item"><span>Ubuntu Wellness Session</span><span class="service-price">R700 · 60 min</span></li>
-        <li class="service-item"><span>Holistic Health Assessment</span><span class="service-price">R900 · 75 min</span></li>
-        <li class="service-item"><span>Follow-up Consultation</span><span class="service-price">R450 · 20 min</span></li>
-        <li class="service-item"><span>Script / Referral Letter</span><span class="service-price">R200</span></li>
+      <ul class="svc-list">
+        <li class="svc-item"><span>Ubuntu Wellness Session</span><span class="svc-price">R700 · 60 min</span></li>
+        <li class="svc-item"><span>Physiotherapy (HS Physio)</span><span class="svc-price">R800 · 45 min</span></li>
+        <li class="svc-item"><span>Physio Follow-up</span><span class="svc-price">R550 · 30 min</span></li>
+        <li class="svc-item"><span>Dr Wendy Consultation</span><span class="svc-price">R650 · 30 min</span></li>
+        <li class="svc-item"><span>Hearing Assessment (Just Hearing)</span><span class="svc-price">R500 · 60 min</span></li>
+        <li class="svc-item"><span>Hearing Aid Fitting</span><span class="svc-price">POA</span></li>
+        <li class="svc-item"><span>Revive Studio Session</span><span class="svc-price">R600 · 60 min</span></li>
       </ul>
     </div>
   </div>
 
+  <!-- MIDDLE -->
   <div class="floor-content" id="ft-1">
     <div class="floor-detail">
-      <span class="floor-badge" style="background:var(--copper-light);color:var(--charcoal)">First Floor</span>
-      <h2>Skin, Beauty &amp; Aesthetics</h2>
-      <p>Raydiance Skin &amp; Beauty, Thread &amp; Shape Brow Bar, Romy van Leeve, and Romi Tollman make the first floor Cape Town's premier beauty destination — medical-grade treatments alongside precision beauty services.</p>
-      <ul class="floor-features">
-        <li><span class="feat-dot"></span>Raydiance — advanced skin treatments &amp; facials</li>
-        <li><span class="feat-dot"></span>Thread &amp; Shape — brow design, waxing &amp; threading</li>
-        <li><span class="feat-dot"></span>Romy van Leeve — aesthetic &amp; beauty therapy</li>
-        <li><span class="feat-dot"></span>Romi Tollman — beauty &amp; skin specialist</li>
-        <li><span class="feat-dot"></span>Treatment packages &amp; loyalty credits available</li>
+      <span class="floor-badge" style="background:var(--fl1)">Middle Floor</span>
+      <h2>Medical, Skin &amp; Beauty</h2>
+      <p>The middle floor combines medical expertise with Cape Town's finest beauty and aesthetic services. Dr D Geoffreys, Dr A Jenkin, and Dr Jess Stanbridge consult alongside Raydiance Skin &amp; Beauty, Thread &amp; Shape Brow Bar, Romy van Leeve, Romi Tollman, Hiatus Cape Town, and Linda Brash.</p>
+      <ul class="floor-feats">
+        <li><span class="fdot"></span>Drs Geoffreys, Jenkin &amp; Stanbridge — medical consultations</li>
+        <li><span class="fdot"></span>Raydiance Skin &amp; Beauty — advanced skin treatments</li>
+        <li><span class="fdot"></span>Thread &amp; Shape Brow Bar — precision brow design</li>
+        <li><span class="fdot"></span>Romy van Leeve &amp; Romi Tollman — beauty therapy</li>
+        <li><span class="fdot"></span>Hiatus Cape Town — restorative wellness experiences</li>
+        <li><span class="fdot"></span>Linda Brash — specialist therapy practice</li>
       </ul>
-      <button class="btn-primary" onclick="openModal('Beauty Treatment','First Floor','1')">Book First Floor</button>
+      <button class="btn-primary" style="background:var(--fl1)" onclick="openModal('Middle Floor Booking','Middle Floor','1')">Book Middle Floor</button>
     </div>
     <div class="floor-panel">
       <p class="panel-title">Services &amp; Rates</p>
-      <ul class="service-list">
-        <li class="service-item"><span>Advanced Facial (Raydiance)</span><span class="service-price">R850 · 60 min</span></li>
-        <li class="service-item"><span>Skin Analysis &amp; Consult</span><span class="service-price">R350 · 30 min</span></li>
-        <li class="service-item"><span>Brow Design (Thread &amp; Shape)</span><span class="service-price">R180 · 30 min</span></li>
-        <li class="service-item"><span>Lash &amp; Brow Tint</span><span class="service-price">R220 · 45 min</span></li>
-        <li class="service-item"><span>Beauty Therapy Session</span><span class="service-price">R600 · 60 min</span></li>
-        <li class="service-item"><span>Waxing (Full)</span><span class="service-price">R450 · 60 min</span></li>
+      <ul class="svc-list">
+        <li class="svc-item"><span>GP / Medical Consultation</span><span class="svc-price">R650 · 30 min</span></li>
+        <li class="svc-item"><span>Advanced Facial (Raydiance)</span><span class="svc-price">R850 · 60 min</span></li>
+        <li class="svc-item"><span>Skin Analysis &amp; Consult</span><span class="svc-price">R350 · 30 min</span></li>
+        <li class="svc-item"><span>Brow Design (Thread &amp; Shape)</span><span class="svc-price">R180 · 30 min</span></li>
+        <li class="svc-item"><span>Beauty Therapy Session</span><span class="svc-price">R600 · 60 min</span></li>
+        <li class="svc-item"><span>Hiatus Wellness Experience</span><span class="svc-price">R1,500 · 2 hr</span></li>
+        <li class="svc-item"><span>Linda Brash — Therapy Session</span><span class="svc-price">R900 · 60 min</span></li>
       </ul>
     </div>
   </div>
 
+  <!-- TOP -->
   <div class="floor-content" id="ft-2">
     <div class="floor-detail">
-      <span class="floor-badge" style="background:var(--floor-2)">Second Floor</span>
-      <h2>Movement &amp; Studio</h2>
-      <p>High Intensity Pilates leads the second floor alongside personal trainers Vyvyan Bean and Taryn Kelly. Class-based energy meets one-on-one precision coaching.</p>
-      <p>Book drop-in classes, buy credit packages, or join the waitlist when a class is full — automatic SMS notification fires the moment a spot opens.</p>
-      <ul class="floor-features">
-        <li><span class="feat-dot"></span>High Intensity Pilates — group reformer &amp; mat classes</li>
-        <li><span class="feat-dot"></span>Vyvyan Bean — personal training &amp; functional fitness</li>
-        <li><span class="feat-dot"></span>Taryn Kelly — movement coaching &amp; Pilates</li>
-        <li><span class="feat-dot"></span>5, 10, 20-class credit packages</li>
-        <li><span class="feat-dot"></span>Automatic waitlist with SMS on cancellation</li>
+      <span class="floor-badge" style="background:var(--fl2)">Top Floor</span>
+      <h2>Movement &amp; Therapy</h2>
+      <p>High energy and private calm co-exist on the top floor. High Intensity Pilates, Vyvyan Bean, and Taryn Kelly lead the movement side, while Peter Jones and the therapy collective — Rochelle, Trudy, Pam, Michelle, Yvonne, and Wilscha — provide private wellness and counselling services.</p>
+      <ul class="floor-feats">
+        <li><span class="fdot"></span>High Intensity Pilates — group reformer &amp; mat classes (capped at 10)</li>
+        <li><span class="fdot"></span>Vyvyan Bean — personal training &amp; functional fitness</li>
+        <li><span class="fdot"></span>Taryn Kelly — movement coaching &amp; Pilates</li>
+        <li><span class="fdot"></span>Peter Jones — allied health &amp; wellness practitioner</li>
+        <li><span class="fdot"></span>Rochelle · Trudy · Pam · Michelle · Yvonne · Wilscha — therapy collective</li>
+        <li><span class="fdot"></span>Automatic waitlist — SMS notification on class cancellation</li>
       </ul>
-      <button class="btn-primary" style="background:var(--floor-2)" onclick="openModal('Pilates Class','Second Floor','2')">Book a Class</button>
+      <button class="btn-primary" style="background:var(--fl2)" onclick="openModal('Top Floor Booking','Top Floor','2')">Book Top Floor</button>
     </div>
     <div class="floor-panel">
       <p class="panel-title">Packages &amp; Rates</p>
-      <ul class="service-list">
-        <li class="service-item"><span>Drop-in Class</span><span class="service-price">R220</span></li>
-        <li class="service-item"><span>5-Class Pack</span><span class="service-price">R950 · R190/class</span></li>
-        <li class="service-item"><span>10-Class Pack</span><span class="service-price">R1,800 · R180/class</span></li>
-        <li class="service-item"><span>Monthly Unlimited</span><span class="service-price">R2,200/mo</span></li>
-        <li class="service-item"><span>Personal Training (1hr)</span><span class="service-price">R550</span></li>
-        <li class="service-item"><span>Initial Assessment</span><span class="service-price">R400 · 45 min</span></li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="floor-content" id="ft-3">
-    <div class="floor-detail">
-      <span class="floor-badge" style="background:var(--floor-3)">Third Floor</span>
-      <h2>Therapy &amp; Wellness Suites</h2>
-      <p>The third floor is home to Rochelle, Trudy &amp; Pam, Michelle, Yvonne &amp; Wilscha, Linda Brash, and Hiatus Cape Town — offering private therapy, counselling, and restorative wellness in a discreet, calm environment.</p>
-      <p>Client notes never touch the central system. Practitioners sync their own calendars and manage their own client relationships in full privacy.</p>
-      <ul class="floor-features">
-        <li><span class="feat-dot"></span>Individual &amp; group therapy sessions</li>
-        <li><span class="feat-dot"></span>Hiatus Cape Town — restorative wellness &amp; retreat services</li>
-        <li><span class="feat-dot"></span>Linda Brash — specialist therapy practice</li>
-        <li><span class="feat-dot"></span>Recurring appointment scheduling with calendar sync</li>
-        <li><span class="feat-dot"></span>Full client anonymity — private notes stay with the therapist</li>
-      </ul>
-      <button class="btn-primary" style="background:var(--floor-3)" onclick="openModal('Therapy Session','Third Floor','3')">Book Third Floor</button>
-    </div>
-    <div class="floor-panel">
-      <p class="panel-title">Services &amp; Rates</p>
-      <ul class="service-list">
-        <li class="service-item"><span>Individual Session (60 min)</span><span class="service-price">R900</span></li>
-        <li class="service-item"><span>Couples Session (75 min)</span><span class="service-price">R1,100</span></li>
-        <li class="service-item"><span>Initial Assessment</span><span class="service-price">R1,200 · 90 min</span></li>
-        <li class="service-item"><span>Hiatus Wellness Experience</span><span class="service-price">R1,500 · 2 hr</span></li>
-        <li class="service-item"><span>Group Session</span><span class="service-price">R350/person</span></li>
-        <li class="service-item"><span>Follow-up (30 min)</span><span class="service-price">R450</span></li>
+      <ul class="svc-list">
+        <li class="svc-item"><span>Pilates Drop-in Class</span><span class="svc-price">R220</span></li>
+        <li class="svc-item"><span>5-Class Pack</span><span class="svc-price">R950 · R190/class</span></li>
+        <li class="svc-item"><span>10-Class Pack</span><span class="svc-price">R1,800 · R180/class</span></li>
+        <li class="svc-item"><span>Monthly Unlimited</span><span class="svc-price">R2,200/mo</span></li>
+        <li class="svc-item"><span>Personal Training (1hr)</span><span class="svc-price">R550</span></li>
+        <li class="svc-item"><span>Therapy Session (60 min)</span><span class="svc-price">R900</span></li>
+        <li class="svc-item"><span>Peter Jones — Consultation</span><span class="svc-price">R700 · 45 min</span></li>
       </ul>
     </div>
   </div>
@@ -521,52 +479,28 @@ footer{background:var(--charcoal);padding:3rem 2rem}
 <div class="section-inner">
   <div class="section-header">
     <div>
-      <p class="section-eyebrow">Second Floor · High Intensity Pilates</p>
+      <p class="section-eyebrow">Top Floor · High Intensity Pilates</p>
       <h2 class="section-title">This Week's Classes</h2>
     </div>
-    <button class="btn-outline" style="white-space:nowrap" onclick="openModal('Pilates Class','Second Floor','2')">Book a Class</button>
+    <button class="btn-outline" style="white-space:nowrap" onclick="openModal('Pilates Class','Top Floor','2')">Book a Class</button>
   </div>
-  <div class="schedule-grid" id="sched-grid"></div>
+  <div class="sched-grid" id="sched-grid"></div>
 </div>
 </section>
 
-<!-- TENANT PITCH -->
+<!-- PITCH -->
 <section id="tenants" class="pitch-section">
 <div class="section-inner">
   <p class="section-eyebrow">For Practitioners</p>
   <h2 class="section-title">The Connected Wellness Hub</h2>
-  <p class="section-sub">You're exceptional at your craft. We eliminate the admin, bring you clients, and elevate Cape Town Medi-Spa's collective prestige.</p>
+  <p class="section-sub">You're exceptional at your craft. We eliminate the admin, bring you clients, and elevate Cape Town Medi-Spa's collective reputation at 99 Kloof Street.</p>
   <div class="pitch-grid">
-    <div class="pitch-card">
-      <div class="pitch-icon">📅</div>
-      <h3>Zero Admin Booking</h3>
-      <p>Your calendar, automated. Clients book online, receive reminders, and arrive prepared — you focus on the session.</p>
-    </div>
-    <div class="pitch-card">
-      <div class="pitch-icon">💳</div>
-      <h3>Instant Payouts via Yoco</h3>
-      <p>Platform fee deducted automatically. Your share lands in your account within 24 hours of each session.</p>
-    </div>
-    <div class="pitch-card">
-      <div class="pitch-icon">🔒</div>
-      <h3>Full Independence</h3>
-      <p>You own your pricing, hours, and client relationships. The hub provides infrastructure — never interference.</p>
-    </div>
-    <div class="pitch-card">
-      <div class="pitch-icon">📊</div>
-      <h3>Your Dashboard</h3>
-      <p>Revenue, bookings, repeat client rates, and no-show tracking — in plain language, not spreadsheets.</p>
-    </div>
-    <div class="pitch-card">
-      <div class="pitch-icon">🌐</div>
-      <h3>Building-Wide Visibility</h3>
-      <p>Every client who books any tenant sees the full directory. Cross-referrals happen organically — a GP sends patients upstairs for Pilates, a therapist refers to Raydiance for wellness facials.</p>
-    </div>
-    <div class="pitch-card">
-      <div class="pitch-icon">🛡️</div>
-      <h3>Compliance Built In</h3>
-      <p>POPIA-compliant data handling, medical intake forms, and HPCSA profile verification — all handled by the platform.</p>
-    </div>
+    <div class="pitch-card"><div class="pitch-icon">📅</div><h3>Zero Admin Booking</h3><p>Your calendar, automated. Clients book online, get reminders, and arrive prepared — you focus on the session.</p></div>
+    <div class="pitch-card"><div class="pitch-icon">💳</div><h3>Instant Payouts via Yoco</h3><p>Platform fee deducted automatically. Your share lands in your account within 24 hours of each session.</p></div>
+    <div class="pitch-card"><div class="pitch-icon">🔒</div><h3>Full Independence</h3><p>You own your pricing, hours, and client relationships. The hub provides infrastructure — never interference.</p></div>
+    <div class="pitch-card"><div class="pitch-icon">📊</div><h3>Your Dashboard</h3><p>Revenue, bookings, repeat client rates — in plain language, not spreadsheets.</p></div>
+    <div class="pitch-card"><div class="pitch-icon">🌐</div><h3>Building-Wide Visibility</h3><p>Every client who books any tenant sees the full directory. Cross-referrals between floors happen organically.</p></div>
+    <div class="pitch-card"><div class="pitch-icon">🛡️</div><h3>Compliance Built In</h3><p>POPIA-compliant data handling, digital intake forms, and verified practitioner profiles — all handled by the platform.</p></div>
   </div>
   <div class="pitch-cta">
     <div>
@@ -578,52 +512,23 @@ footer{background:var(--charcoal);padding:3rem 2rem}
 </div>
 </section>
 
-<!-- PORTAL PREVIEW -->
+<!-- PORTAL -->
 <section class="portal-section">
 <div class="section-inner">
   <div class="portal-grid">
     <div>
       <p class="section-eyebrow">Practitioner Portal</p>
       <h2 class="section-title">Your Practice, Managed</h2>
-      <p class="section-sub">Every tenant gets a private dashboard. No shared data. No central admin visibility into your client notes.</p>
+      <p class="section-sub">Every tenant gets a private dashboard. No shared data. Central admin never sees your client notes.</p>
       <div class="portal-feats">
-        <div class="portal-feat">
-          <div class="portal-feat-icon">📆</div>
-          <div>
-            <h4>Calendar Sync</h4>
-            <p>Connect Google or Outlook. Bookings appear in your personal calendar. Double-booking is impossible.</p>
-          </div>
-        </div>
-        <div class="portal-feat">
-          <div class="portal-feat-icon">💬</div>
-          <div>
-            <h4>Secure Client Messaging</h4>
-            <p>Encrypted communication. Therapist notes stay on your device — not on our servers.</p>
-          </div>
-        </div>
-        <div class="portal-feat">
-          <div class="portal-feat-icon">📈</div>
-          <div>
-            <h4>Revenue Insights</h4>
-            <p>Monthly earnings, session counts, and repeat client rates at a glance.</p>
-          </div>
-        </div>
-        <div class="portal-feat">
-          <div class="portal-feat-icon">⚙️</div>
-          <div>
-            <h4>Full Autonomy</h4>
-            <p>Set your own hours, services, and cancellation policy. The hub never overrides your rules.</p>
-          </div>
-        </div>
+        <div class="portal-feat"><div class="portal-feat-icon">📆</div><div><h4>Calendar Sync</h4><p>Connect Google or Outlook. Bookings appear in your calendar. Double-booking is impossible.</p></div></div>
+        <div class="portal-feat"><div class="portal-feat-icon">💬</div><div><h4>Secure Messaging</h4><p>Encrypted. Therapist notes stay on your device — not on our servers.</p></div></div>
+        <div class="portal-feat"><div class="portal-feat-icon">📈</div><div><h4>Revenue Insights</h4><p>Monthly earnings, session counts, and repeat client rates at a glance.</p></div></div>
+        <div class="portal-feat"><div class="portal-feat-icon">⚙️</div><div><h4>Full Autonomy</h4><p>Set your own hours, services, and cancellation policy. The hub never overrides your rules.</p></div></div>
       </div>
     </div>
     <div class="db-mock">
-      <div class="db-bar">
-        <div class="db-dot" style="background:#ff5f57"></div>
-        <div class="db-dot" style="background:#ffbd2e;margin-left:4px"></div>
-        <div class="db-dot" style="background:#28c840;margin-left:4px"></div>
-        <span>Practitioner Dashboard</span>
-      </div>
+      <div class="db-bar"><div class="db-dot" style="background:#ff5f57"></div><div class="db-dot" style="background:#ffbd2e;margin-left:4px"></div><div class="db-dot" style="background:#28c840;margin-left:4px"></div><span>Practitioner Dashboard</span></div>
       <div class="db-body">
         <div class="db-metrics">
           <div class="db-met"><div class="db-met-n">7</div><div class="db-met-l">Today</div></div>
@@ -631,10 +536,10 @@ footer{background:var(--charcoal);padding:3rem 2rem}
           <div class="db-met"><div class="db-met-n">96%</div><div class="db-met-l">Attended</div></div>
         </div>
         <p class="db-lbl">Today's Appointments</p>
-        <div class="db-row"><span>S.M. — Initial Consult</span><div style="display:flex;gap:6px;align-items:center"><span class="db-badge">Confirmed</span><span style="font-size:0.73rem;color:var(--text-muted)">09:00</span></div></div>
-        <div class="db-row"><span>T.D. — Follow-up</span><div style="display:flex;gap:6px;align-items:center"><span class="db-badge">Confirmed</span><span style="font-size:0.73rem;color:var(--text-muted)">10:30</span></div></div>
-        <div class="db-row"><span>L.N. — Session 4</span><div style="display:flex;gap:6px;align-items:center"><span class="db-badge pend">Intake Due</span><span style="font-size:0.73rem;color:var(--text-muted)">12:00</span></div></div>
-        <div class="db-row"><span>Open Slot</span><div style="display:flex;gap:6px;align-items:center"><span class="db-badge pend">Available</span><span style="font-size:0.73rem;color:var(--text-muted)">14:00</span></div></div>
+        <div class="db-row"><span>S.M. — Initial Consult</span><div style="display:flex;gap:5px;align-items:center"><span class="db-bdg">Confirmed</span><span style="font-size:0.7rem;color:var(--text-muted)">09:00</span></div></div>
+        <div class="db-row"><span>T.D. — Follow-up</span><div style="display:flex;gap:5px;align-items:center"><span class="db-bdg">Confirmed</span><span style="font-size:0.7rem;color:var(--text-muted)">10:30</span></div></div>
+        <div class="db-row"><span>L.N. — Session 4</span><div style="display:flex;gap:5px;align-items:center"><span class="db-bdg pend">Intake Due</span><span style="font-size:0.7rem;color:var(--text-muted)">12:00</span></div></div>
+        <div class="db-row"><span>Open Slot</span><div style="display:flex;gap:5px;align-items:center"><span class="db-bdg pend">Available</span><span style="font-size:0.7rem;color:var(--text-muted)">14:00</span></div></div>
       </div>
     </div>
   </div>
@@ -648,18 +553,18 @@ footer{background:var(--charcoal);padding:3rem 2rem}
     <div class="contact-info">
       <p class="section-eyebrow">Get in Touch</p>
       <h2>Book a Consultation<br>or Apply to Join</h2>
-      <p>Whether you're looking for care or looking for a practice home — we'd love to hear from you.</p>
-      <div class="cdet"><div class="cdet-icon">📍</div><div class="cdet-text">Cape Town, Western Cape<span>Address confirmed on booking</span></div></div>
+      <p>Whether you're looking for care or a practice home — we'd love to hear from you.</p>
+      <div class="cdet"><div class="cdet-icon">📍</div><div class="cdet-text">99 Kloof Street, Cape Town<span>Gardens · Western Cape · 8001</span></div></div>
       <div class="cdet"><div class="cdet-icon">📞</div><div class="cdet-text">+27 (0)74 481 5163<span>WhatsApp available</span></div></div>
-      <div class="cdet"><div class="cdet-icon">✉️</div><div class="cdet-text">hello@capetownmedispa.co.za<span>Response within one business day</span></div></div>
+      <div class="cdet"><div class="cdet-icon">✉️</div><div class="cdet-text">hello@medspa.co.za<span>Response within one business day</span></div></div>
     </div>
     <form class="contact-form" onsubmit="handleSubmit(event)">
       <div class="form-row">
-        <div class="form-group"><label class="form-label">First Name</label><input type="text" class="form-input" placeholder="Amahle" required></div>
-        <div class="form-group"><label class="form-label">Last Name</label><input type="text" class="form-input" placeholder="Dlamini" required></div>
+        <div><label class="form-label">First Name</label><input type="text" class="form-input" placeholder="Amahle" required></div>
+        <div><label class="form-label">Last Name</label><input type="text" class="form-input" placeholder="Dlamini" required></div>
       </div>
-      <div class="form-group"><label class="form-label">Email</label><input type="email" class="form-input" placeholder="you@email.com" required></div>
-      <div class="form-group">
+      <div><label class="form-label">Email</label><input type="email" class="form-input" placeholder="you@email.com" required></div>
+      <div>
         <label class="form-label">I am a</label>
         <select class="form-input">
           <option>Patient / Client</option>
@@ -668,7 +573,7 @@ footer{background:var(--charcoal);padding:3rem 2rem}
           <option>Media / Press</option>
         </select>
       </div>
-      <div class="form-group"><label class="form-label">Message</label><textarea class="form-input" rows="4" placeholder="Tell us what you need..."></textarea></div>
+      <div><label class="form-label">Message</label><textarea class="form-input" rows="4" placeholder="Tell us what you need..."></textarea></div>
       <button type="submit" class="btn-primary" style="width:100%">Send Message</button>
     </form>
   </div>
@@ -681,9 +586,15 @@ footer{background:var(--charcoal);padding:3rem 2rem}
     <div class="footer-top">
       <div>
         <div class="footer-brand-name">Cape Town Medi-<em>Spa</em></div>
-        <div class="footer-tagline">Your Wellness Building · Cape Town</div>
+        <div class="footer-brand-desc">Your connected wellness building at the heart of Kloof Street. Three floors of medical care, beauty, movement, and therapy — all under one roof.</div>
+        <div class="footer-address">
+          <strong>99 Kloof Street</strong><br>
+          Gardens, Cape Town<br>
+          Western Cape, 8001<br>
+          <a href="mailto:hello@medspa.co.za" style="color:rgba(181,112,58,0.55);text-decoration:none;font-size:0.76rem">hello@medspa.co.za</a>
+        </div>
       </div>
-      <div class="footer-links-col">
+      <div class="footer-col">
         <h5>Navigate</h5>
         <a href="#directory">Directory</a>
         <a href="#floors">Floors</a>
@@ -691,52 +602,50 @@ footer{background:var(--charcoal);padding:3rem 2rem}
         <a href="#tenants">Become a Tenant</a>
         <a href="#contact">Contact</a>
       </div>
-      <div class="footer-links-col">
+      <div class="footer-col">
         <h5>Our Tenants</h5>
         <a href="#directory">Ubuntu Wellness</a>
+        <a href="#directory">HS Physio</a>
         <a href="#directory">High Intensity Pilates</a>
         <a href="#directory">Raydiance Skin &amp; Beauty</a>
         <a href="#directory">Thread &amp; Shape Brow Bar</a>
         <a href="#directory">Hiatus Cape Town</a>
+        <a href="#directory">Revive Studio</a>
       </div>
-      <div class="footer-links-col">
+      <div class="footer-col">
         <h5>Platform</h5>
         <a href="#tenants">Tenant Portal</a>
         <a href="#tenants">Pricing</a>
         <a href="#contact">Support</a>
-        <a href="#" style="color:rgba(253,250,247,0.15);font-size:0.72rem;margin-top:0.5rem">Powered by Business Hustle</a>
       </div>
     </div>
     <div class="footer-bottom">
       <div class="footer-copy">© 2026 Cape Town Medi-Spa. POPIA Compliant. All rights reserved.</div>
-      <div class="footer-powered">Yoco Payments · Secure Booking</div>
+      <div class="footer-madeby">
+        Made with ♥ by <a href="https://businesshustle.co.za" target="_blank" rel="noopener">Business Hustle</a>
+      </div>
     </div>
   </div>
 </footer>
 
-<!-- BOOKING MODAL -->
+<!-- MODAL -->
 <div class="modal-overlay" id="modal-overlay" onclick="handleOverlay(event)">
   <div class="modal">
     <div class="modal-hdr">
       <div>
         <h2 id="modal-title">Book an Appointment</h2>
-        <p style="font-size:0.78rem;color:var(--text-muted);margin-top:0.2rem" id="modal-sub">Cape Town Medi-Spa</p>
+        <p style="font-size:0.76rem;color:var(--text-muted);margin-top:0.18rem" id="modal-sub">99 Kloof Street · Cape Town Medi-Spa</p>
       </div>
       <button class="modal-close" onclick="closeModal()">×</button>
     </div>
     <div class="modal-bdy">
       <div class="step-dots" id="step-dots">
-        <div class="sdot cur" id="sd0"></div>
-        <div class="sdot" id="sd1"></div>
-        <div class="sdot" id="sd2"></div>
-        <div class="sdot" id="sd3"></div>
+        <div class="sdot cur" id="sd0"></div><div class="sdot" id="sd1"></div><div class="sdot" id="sd2"></div><div class="sdot" id="sd3"></div>
       </div>
-
       <div class="step active" id="s0">
-        <div class="form-group"><label class="form-label">Select Service</label><select class="form-input" id="svc-sel"></select></div>
-        <div class="form-group"><label class="form-label">Preferred Date</label><input type="date" class="form-input" id="bk-date"></div>
-        <div class="form-group">
-          <label class="form-label">Available Times</label>
+        <div style="margin-bottom:1.1rem"><label class="form-label">Select Service</label><select class="form-input" id="svc-sel"></select></div>
+        <div style="margin-bottom:1.1rem"><label class="form-label">Preferred Date</label><input type="date" class="form-input" id="bk-date"></div>
+        <div><label class="form-label">Available Times</label>
           <div class="time-slots">
             <button class="tslot" onclick="selTime(this)">08:00</button>
             <button class="tslot" onclick="selTime(this)">09:00</button>
@@ -749,82 +658,78 @@ footer{background:var(--charcoal);padding:3rem 2rem}
           </div>
         </div>
       </div>
-
       <div class="step" id="s1">
         <div class="intake-note" id="intake-note">ℹ️ You'll receive a secure intake form link via email before your appointment — completing it reduces your waiting time.</div>
-        <div class="form-row">
-          <div class="form-group"><label class="form-label">First Name</label><input type="text" class="form-input" placeholder="Thabo"></div>
-          <div class="form-group"><label class="form-label">Last Name</label><input type="text" class="form-input" placeholder="Nkosi"></div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.9rem;margin-bottom:0.9rem">
+          <div><label class="form-label">First Name</label><input type="text" class="form-input" placeholder="Thabo"></div>
+          <div><label class="form-label">Last Name</label><input type="text" class="form-input" placeholder="Nkosi"></div>
         </div>
-        <div class="form-group"><label class="form-label">Email</label><input type="email" class="form-input" placeholder="you@email.com"></div>
-        <div class="form-group"><label class="form-label">Mobile (WhatsApp reminders)</label><input type="tel" class="form-input" placeholder="+27 82 000 0000"></div>
-        <div class="form-group" id="recur-opt" style="display:none">
-          <label class="form-label">Recurring Appointment</label>
-          <select class="form-input"><option>Once off</option><option>Weekly — same time</option><option>Fortnightly</option><option>Monthly</option></select>
-        </div>
+        <div style="margin-bottom:0.9rem"><label class="form-label">Email</label><input type="email" class="form-input" placeholder="you@email.com"></div>
+        <div style="margin-bottom:0.9rem"><label class="form-label">Mobile (WhatsApp reminders)</label><input type="tel" class="form-input" placeholder="+27 82 000 0000"></div>
+        <div id="recur-opt" style="display:none;margin-bottom:0.9rem"><label class="form-label">Recurring Appointment</label><select class="form-input"><option>Once off</option><option>Weekly — same time</option><option>Fortnightly</option><option>Monthly</option></select></div>
       </div>
-
       <div class="step" id="s2">
-        <div style="background:var(--bone);border-radius:var(--radius-lg);padding:1.4rem;margin-bottom:1.25rem">
-          <p style="font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-muted);margin-bottom:0.9rem;font-weight:500">Booking Summary</p>
-          <div style="display:flex;justify-content:space-between;font-size:0.86rem;margin-bottom:0.45rem"><span>Service</span><span id="sum-svc" style="font-weight:500">—</span></div>
-          <div style="display:flex;justify-content:space-between;font-size:0.86rem;margin-bottom:0.45rem"><span>Date &amp; Time</span><span id="sum-time" style="font-weight:500">—</span></div>
-          <div style="border-top:0.5px solid var(--border);margin:1rem 0;padding-top:0.9rem;display:flex;justify-content:space-between">
-            <span style="font-weight:500">Total</span><span id="sum-total" style="font-family:'Cormorant Garamond',serif;font-size:1.3rem">—</span>
-          </div>
+        <div style="background:var(--bone);border-radius:var(--radius-lg);padding:1.3rem;margin-bottom:1.1rem">
+          <p style="font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-muted);margin-bottom:0.85rem;font-weight:500">Booking Summary</p>
+          <div style="display:flex;justify-content:space-between;font-size:0.84rem;margin-bottom:0.4rem"><span>Service</span><span id="sum-svc" style="font-weight:500">—</span></div>
+          <div style="display:flex;justify-content:space-between;font-size:0.84rem;margin-bottom:0.4rem"><span>Date &amp; Time</span><span id="sum-time" style="font-weight:500">—</span></div>
+          <div style="border-top:0.5px solid var(--border);margin:0.9rem 0;padding-top:0.85rem;display:flex;justify-content:space-between"><span style="font-weight:500">Total</span><span id="sum-total" style="font-family:'Cormorant Garamond',serif;font-size:1.25rem">—</span></div>
         </div>
-        <div class="form-group"><label class="form-label">Payment Method</label>
-          <select class="form-input"><option>Card — Yoco Checkout</option><option>EFT — Pay on Arrival</option><option>Medical Aid (where applicable)</option></select>
-        </div>
+        <div><label class="form-label">Payment Method</label><select class="form-input"><option>Card — Yoco Checkout</option><option>EFT — Pay on Arrival</option><option>Medical Aid (where applicable)</option></select></div>
       </div>
-
       <div class="step" id="s3">
-        <div style="text-align:center;padding:2rem 0">
-          <div style="font-size:2.5rem;margin-bottom:1rem">✅</div>
-          <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.7rem;font-weight:400;margin-bottom:0.7rem">Booking Confirmed</h3>
-          <p style="font-size:0.86rem;color:var(--text-muted);line-height:1.85">Confirmation sent to your email. Your intake form link arrives 24 hours before your appointment.</p>
-          <div style="margin-top:1.4rem;padding:0.9rem;background:var(--bone);border-radius:var(--radius-lg);font-size:0.78rem;color:var(--text-muted)">Add to calendar — a .ics file is attached to your confirmation email.</div>
+        <div style="text-align:center;padding:1.8rem 0">
+          <div style="font-size:2.4rem;margin-bottom:0.9rem">✅</div>
+          <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.65rem;font-weight:400;margin-bottom:0.65rem">Booking Confirmed</h3>
+          <p style="font-size:0.84rem;color:var(--text-muted);line-height:1.85">Confirmation sent to your email. Your intake form arrives 24 hours before your appointment.</p>
+          <div style="margin-top:1.2rem;padding:0.85rem;background:var(--bone);border-radius:var(--radius-lg);font-size:0.76rem;color:var(--text-muted)">Add to calendar — a .ics file is attached to your confirmation email.</div>
         </div>
       </div>
     </div>
     <div class="modal-ftr">
       <div class="pay-badges"><span class="pay-badge">Yoco</span><span class="pay-badge">POPIA</span><span class="pay-badge">Secure</span></div>
       <div class="modal-nav">
-        <button class="btn-outline" id="btn-back" onclick="stepBack()" style="display:none;padding:0.6rem 1.1rem;font-size:0.78rem">Back</button>
-        <button class="btn-primary" id="btn-next" onclick="stepNext()" style="padding:0.6rem 1.4rem;font-size:0.78rem">Continue</button>
+        <button class="btn-outline" id="btn-back" onclick="stepBack()" style="display:none;padding:0.55rem 1rem;font-size:0.76rem">Back</button>
+        <button class="btn-primary" id="btn-next" onclick="stepNext()" style="padding:0.55rem 1.3rem;font-size:0.76rem">Continue</button>
       </div>
     </div>
   </div>
 </div>
 
 <script>
-const PRACTITIONERS = [
-  {floor:0,name:"Dr D Geoffreys",title:"General Practitioner",init:"DG",av:"av-dark",tags:["GP Consultations","Medical Aid","Scripts & Referrals"],avail:"Next: Tomorrow",rate:"from R650"},
-  {floor:0,name:"Dr A Jenkin",title:"Medical Doctor",init:"AJ",av:"av-dark",tags:["General Medicine","Chronic Conditions","Preventive Health"],avail:"This week",rate:"from R650"},
-  {floor:0,name:"Dr Jess Stanbridge",title:"Medical Doctor",init:"JS",av:"av-dark",tags:["Women's Health","Aesthetic Medicine","General Practice"],avail:"Next: Mon",rate:"from R650"},
-  {floor:0,name:"Ubuntu Wellness",title:"Holistic Health Centre",init:"UW",av:"av-green",tags:["Holistic Health","Integrative Therapy","Wellness Assessments"],avail:"Daily",rate:"from R700"},
-  {floor:0,name:"Peter Jones",title:"Allied Health Practitioner",init:"PJ",av:"av-dark",tags:["Allied Health","Rehabilitation","Wellness"],avail:"By appointment",rate:"from R600"},
-  {floor:1,name:"Raydiance Skin & Beauty",title:"Advanced Skin Clinic",init:"RD",av:"av-copper",tags:["Advanced Facials","Skin Analysis","Medical-Grade Treatments"],avail:"Daily",rate:"from R350"},
-  {floor:1,name:"Thread & Shape Brow Bar",title:"Brow Design Studio",init:"TS",av:"av-copper",tags:["Brow Threading","Waxing","Lash & Brow Tint"],avail:"Walk-ins welcome",rate:"from R180"},
-  {floor:1,name:"Romy van Leeve",title:"Aesthetic & Beauty Therapist",init:"RL",av:"av-copper",tags:["Aesthetic Therapy","Beauty Treatments","Skin Care"],avail:"Tue – Sat",rate:"from R450"},
-  {floor:1,name:"Romi Tollman",title:"Beauty & Skin Specialist",init:"RT",av:"av-copper",tags:["Beauty Therapy","Skin Treatments","Wellness Facials"],avail:"Mon – Fri",rate:"from R500"},
-  {floor:2,name:"High Intensity Pilates",title:"Pilates Studio",init:"HI",av:"av-green",tags:["Reformer Pilates","Mat Classes","Prenatal Pilates"],avail:"Daily classes",rate:"from R220"},
-  {floor:2,name:"Vyvyan Bean",title:"Personal Trainer & Coach",init:"VB",av:"av-green",tags:["Personal Training","Functional Fitness","Strength & Conditioning"],avail:"Mon/Wed/Fri",rate:"from R450"},
-  {floor:2,name:"Taryn Kelly",title:"Movement Coach & Pilates",init:"TK",av:"av-green",tags:["Pilates","Movement Coaching","Rehabilitation"],avail:"Tue/Thu/Sat",rate:"from R400"},
-  {floor:3,name:"Rochelle · Trudy · Pam",title:"Wellness Practitioners",init:"RP",av:"av-purple",tags:["Wellness Therapy","Holistic Treatments","Mind-Body Sessions"],avail:"By appointment",rate:"from R750"},
-  {floor:3,name:"Michelle · Yvonne · Wilscha",title:"Therapy Collective",init:"MY",av:"av-purple",tags:["Counselling","Therapy","Wellness Coaching"],avail:"By appointment",rate:"from R750"},
-  {floor:3,name:"Hiatus Cape Town",title:"Restorative Wellness Studio",init:"HC",av:"av-purple",tags:["Restorative Wellness","Retreat Experiences","Mind & Body"],avail:"By appointment",rate:"from R950"},
-  {floor:3,name:"Linda Brash",title:"Specialist Therapist",init:"LB",av:"av-purple",tags:["Specialist Therapy","Private Practice","Wellness"],avail:"By appointment",rate:"from R900"},
+const P = [
+  // Ground Floor (0)
+  {f:0,name:"Ubuntu Wellness",title:"Integrative Health Centre",init:"UW",tags:["Holistic Health","Integrative Therapy","Wellness Assessments"],avail:"Daily",rate:"from R700"},
+  {f:0,name:"HS Physio",title:"Physiotherapy Practice",init:"HS",tags:["Physiotherapy","Rehabilitation","Sports Injuries"],avail:"Mon–Fri",rate:"from R550"},
+  {f:0,name:"Dr Wendy",title:"Medical Doctor",init:"DW",tags:["General Practice","Medical Consultations","Preventive Health"],avail:"By appointment",rate:"from R650"},
+  {f:0,name:"Just Hearing",title:"Audiology & Hearing Care",init:"JH",tags:["Audiology","Hearing Assessments","Hearing Aids"],avail:"Tue–Sat",rate:"from R500"},
+  {f:0,name:"Revive Studio",title:"Restorative Wellness Studio",init:"RS",tags:["Restorative Wellness","Recovery","Mind & Body"],avail:"Daily",rate:"from R600"},
+  // Middle Floor (1)
+  {f:1,name:"Raydiance Skin & Beauty",title:"Advanced Skin Clinic",init:"RD",tags:["Advanced Facials","Skin Analysis","Medical-Grade Treatments"],avail:"Daily",rate:"from R350"},
+  {f:1,name:"Romy van Leeve",title:"Aesthetic & Beauty Therapist",init:"RL",tags:["Aesthetic Therapy","Beauty Treatments","Skin Care"],avail:"Tue–Sat",rate:"from R450"},
+  {f:1,name:"Romi Tollman",title:"Beauty & Skin Specialist",init:"RT",tags:["Beauty Therapy","Skin Treatments","Wellness Facials"],avail:"Mon–Fri",rate:"from R500"},
+  {f:1,name:"Thread & Shape Brow Bar",title:"Precision Brow Studio",init:"TS",tags:["Brow Threading","Waxing","Lash & Brow Tint"],avail:"Walk-ins welcome",rate:"from R180"},
+  {f:1,name:"Dr D Geoffreys",title:"Medical Doctor",init:"DG",tags:["Medical Consultations","General Practice","Specialist Referrals"],avail:"By appointment",rate:"from R650"},
+  {f:1,name:"Dr A Jenkin",title:"Medical Doctor",init:"AJ",tags:["General Medicine","Chronic Conditions","Preventive Care"],avail:"By appointment",rate:"from R650"},
+  {f:1,name:"Dr Jess Stanbridge",title:"Medical Doctor",init:"JS",tags:["Women's Health","Aesthetic Medicine","General Practice"],avail:"By appointment",rate:"from R650"},
+  {f:1,name:"Hiatus Cape Town",title:"Restorative Wellness",init:"HC",tags:["Restorative Wellness","Retreat Experiences","Mind & Body"],avail:"By appointment",rate:"from R950"},
+  {f:1,name:"Linda Brash",title:"Specialist Therapist",init:"LB",tags:["Specialist Therapy","Private Practice","Counselling"],avail:"By appointment",rate:"from R900"},
+  // Top Floor (2)
+  {f:2,name:"Peter Jones",title:"Allied Health Practitioner",init:"PJ",tags:["Allied Health","Rehabilitation","Wellness"],avail:"By appointment",rate:"from R700"},
+  {f:2,name:"High Intensity Pilates",title:"Pilates Studio",init:"HI",tags:["Reformer Pilates","Mat Classes","Prenatal Pilates"],avail:"Daily classes",rate:"from R220"},
+  {f:2,name:"Vyvyan Bean",title:"Personal Trainer",init:"VB",tags:["Personal Training","Functional Fitness","Strength"],avail:"Mon/Wed/Fri",rate:"from R450"},
+  {f:2,name:"Taryn Kelly",title:"Movement Coach & Pilates",init:"TK",tags:["Pilates","Movement Coaching","Rehabilitation"],avail:"Tue/Thu/Sat",rate:"from R400"},
+  {f:2,name:"Rochelle · Trudy · Pam",title:"Wellness Practitioners",init:"RP",tags:["Wellness Therapy","Holistic Treatments","Mind-Body"],avail:"By appointment",rate:"from R750"},
+  {f:2,name:"Michelle · Yvonne · Wilscha",title:"Therapy Collective",init:"MY",tags:["Counselling","Therapy","Wellness Coaching"],avail:"By appointment",rate:"from R750"},
 ];
 
-const FLOOR_SVCS = {
-  '0':['GP Consultation · R650','Specialist Consult · R1,200','Ubuntu Wellness Session · R700','Follow-up Consult · R450','Script / Referral Letter · R200'],
-  '1':['Advanced Facial · R850','Skin Analysis & Consult · R350','Brow Design · R180','Lash & Brow Tint · R220','Beauty Therapy Session · R600','Waxing · R450'],
-  '2':['Drop-in Class · R220','5-Class Pack · R950','10-Class Pack · R1,800','Monthly Unlimited · R2,200','Personal Training · R550'],
-  '3':['Individual Session · R900','Couples Session · R1,100','Initial Assessment · R1,200','Hiatus Experience · R1,500','Group Session · R350/person'],
+const FL = ['Ground Floor','Middle Floor','Top Floor'];
+const SVCS = {
+  '0':['Ubuntu Wellness Session · R700','Physiotherapy (HS Physio) · R800','Physio Follow-up · R550','Dr Wendy Consultation · R650','Hearing Assessment · R500','Revive Studio Session · R600'],
+  '1':['GP Consultation · R650','Advanced Facial (Raydiance) · R850','Skin Analysis & Consult · R350','Brow Design · R180','Beauty Therapy Session · R600','Hiatus Experience · R1,500'],
+  '2':['Pilates Drop-in · R220','5-Class Pack · R950','10-Class Pack · R1,800','Monthly Unlimited · R2,200','Personal Training · R550','Therapy Session · R900'],
 };
-
-const SCHEDULE = {
+const SCHED = {
   Monday:[{t:"06:30",n:"Sunrise Reformer",i:"HIP",tot:10,bkd:8},{t:"09:00",n:"Mat Pilates",i:"Taryn",tot:12,bkd:5},{t:"17:30",n:"Evening Flow",i:"Vyvyan",tot:10,bkd:10}],
   Tuesday:[{t:"07:00",n:"Prenatal Pilates",i:"HIP",tot:8,bkd:6},{t:"12:00",n:"Lunchtime Core",i:"Taryn",tot:10,bkd:9},{t:"18:00",n:"Stretch & Restore",i:"Vyvyan",tot:12,bkd:4}],
   Wednesday:[{t:"06:30",n:"Sunrise Reformer",i:"HIP",tot:10,bkd:10},{t:"10:00",n:"Rehab Pilates",i:"Taryn",tot:6,bkd:3},{t:"17:30",n:"Power & Flow",i:"Vyvyan",tot:15,bkd:11}],
@@ -832,77 +737,60 @@ const SCHEDULE = {
   Friday:[{t:"06:30",n:"TGIF Flow",i:"Vyvyan",tot:12,bkd:9},{t:"09:00",n:"Reformer Advanced",i:"HIP",tot:8,bkd:8},{t:"12:00",n:"Wind-down",i:"Taryn",tot:10,bkd:5}],
 };
 
-const FLOOR_LABELS = ['Ground Floor','First Floor','Second Floor','Third Floor'];
+const AV = ['av0','av1','av2'];
 
-// Render practitioners
 function renderCards(filter) {
-  const data = filter === 'all' ? PRACTITIONERS : PRACTITIONERS.filter(p=>p.floor===parseInt(filter));
+  const data = filter==='all' ? P : P.filter(p=>p.f===parseInt(filter));
   document.getElementById('prac-grid').innerHTML = data.map(p=>`
-    <div class="prac-card" data-floor="${p.floor}">
-      <div class="prac-card-top">
-        <div class="prac-avatar ${p.av}">${p.init}</div>
-        <div class="prac-floor-tag">${FLOOR_LABELS[p.floor]}</div>
+    <div class="prac-card">
+      <div class="prac-top">
+        <div class="prac-av ${AV[p.f]}">${p.init}</div>
+        <div class="prac-ftag">${FL[p.f]}</div>
         <div class="prac-name">${p.name}</div>
         <div class="prac-title">${p.title}</div>
       </div>
-      <div class="prac-card-body">
-        <div class="prac-tags">${p.tags.map(t=>`<span class="tag">${t}</span>`).join('')}</div>
+      <div class="prac-body">
+        <div class="tags">${p.tags.map(t=>`<span class="tag">${t}</span>`).join('')}</div>
         <div class="prac-meta"><span class="prac-avail">⏱ ${p.avail}</span><span class="prac-rate">${p.rate}</span></div>
-        <button class="btn-book" onclick="openModal('${p.name.replace(/'/g,"\\'")}','${FLOOR_LABELS[p.floor]}','${p.floor}')">Book Now</button>
+        <button class="btn-book" onclick="openModal('${p.name.replace(/'/g,"\\'")}','${FL[p.f]}','${p.f}')">Book Now</button>
       </div>
     </div>`).join('');
 }
 
-function filterCards(f, btn) {
+function filterCards(f,btn){
   document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
   btn.classList.add('active');
   renderCards(f);
 }
 
-// Render schedule
-function renderSchedule() {
-  document.getElementById('sched-grid').innerHTML = Object.entries(SCHEDULE).map(([day,classes])=>`
-    <div class="day-col">
-      <h4>${day}</h4>
-      ${classes.map(c=>{
-        const pct=Math.round(c.bkd/c.tot*100);
-        const full=c.bkd>=c.tot;
-        const fill=full?'gone':pct>=80?'near':'';
-        return `<div class="class-slot ${full?'full':''}" onclick="${full?'alert(\'Added to waitlist — we\'ll SMS you when a spot opens!\')':'openModal(\''+c.n+'\',\'Second Floor\',\'2\')'}">
-          <div class="class-time">${c.t}</div>
-          <div class="class-name">${c.n}</div>
-          <div class="class-instructor">${c.i}</div>
-          <div class="class-spots">${full?'Full — join waitlist':`${c.tot-c.bkd}/${c.tot} spots left`}</div>
-          <div class="spots-bar"><div class="spots-fill ${fill}" style="width:${pct}%"></div></div>
-        </div>`;
-      }).join('')}
-    </div>`).join('');
+function renderSchedule(){
+  document.getElementById('sched-grid').innerHTML=Object.entries(SCHED).map(([day,cls])=>`
+    <div class="day-col"><h4>${day}</h4>${cls.map(c=>{
+      const pct=Math.round(c.bkd/c.tot*100),full=c.bkd>=c.tot,fill=full?'gone':pct>=80?'near':'';
+      return `<div class="cls-slot${full?' full':''}" onclick="${full?"alert('Added to waitlist — we\\'ll SMS you when a spot opens!')":`openModal('${c.n}','Top Floor','2')`}">
+        <div class="cls-time">${c.t}</div><div class="cls-name">${c.n}</div><div class="cls-instr">${c.i}</div>
+        <div class="cls-spots">${full?'Full — join waitlist':`${c.tot-c.bkd}/${c.tot} spots`}</div>
+        <div class="spots-bar"><div class="spots-fill ${fill}" style="width:${pct}%"></div></div>
+      </div>`;}).join('')}</div>`).join('');
 }
 
-// Floor tabs
-function switchTab(i, btn) {
+function switchTab(i,btn){
   document.querySelectorAll('.floor-tab').forEach(t=>t.classList.remove('active'));
   document.querySelectorAll('.floor-content').forEach(c=>c.classList.remove('active'));
   (btn||document.querySelectorAll('.floor-tab')[i]).classList.add('active');
   document.getElementById('ft-'+i).classList.add('active');
 }
-function setTab(i) {
-  document.getElementById('floors').scrollIntoView({behavior:'smooth'});
-  setTimeout(()=>switchTab(i,null),350);
-}
+function setTab(i){document.getElementById('floors').scrollIntoView({behavior:'smooth'});setTimeout(()=>switchTab(i,null),350);}
 
-// Modal
-let step=0, curFloor='0';
-function openModal(svc, floor, fi) {
-  step=0; curFloor=fi||'0';
-  document.getElementById('modal-title').textContent = svc||'Book an Appointment';
-  document.getElementById('modal-sub').textContent = floor+' · Cape Town Medi-Spa';
-  const sel=document.getElementById('svc-sel');
-  sel.innerHTML=(FLOOR_SVCS[curFloor]||FLOOR_SVCS['0']).map(o=>`<option>${o}</option>`).join('');
-  document.getElementById('recur-opt').style.display=curFloor==='3'?'block':'none';
-  document.getElementById('intake-note').style.display=curFloor==='0'?'block':'none';
-  const t=new Date().toISOString().split('T')[0];
-  document.getElementById('bk-date').min=t;
+let step=0,curF='0';
+function openModal(svc,floor,fi){
+  step=0;curF=fi||'0';
+  document.getElementById('modal-title').textContent=svc||'Book an Appointment';
+  document.getElementById('modal-sub').textContent=floor+' · Cape Town Medi-Spa';
+  document.getElementById('svc-sel').innerHTML=(SVCS[curF]||SVCS['0']).map(o=>`<option>${o}</option>`).join('');
+  document.getElementById('recur-opt').style.display=curF==='2'?'block':'none';
+  document.getElementById('intake-note').style.display=curF==='0'||curF==='1'?'block':'none';
+  document.getElementById('bk-date').min=new Date().toISOString().split('T')[0];
   updStep();
   document.getElementById('modal-overlay').classList.add('open');
   document.body.style.overflow='hidden';
@@ -919,26 +807,20 @@ function updStep(){
 function stepNext(){
   if(step===3){closeModal();return;}
   if(step===2){
-    const svc=document.getElementById('svc-sel').value;
-    document.getElementById('sum-svc').textContent=svc.split('·')[0].trim();
-    document.getElementById('sum-total').textContent=svc.includes('·')?svc.split('·')[1].trim():'—';
-    const d=document.getElementById('bk-date').value;
-    const sl=document.querySelector('.tslot.sel');
+    const s=document.getElementById('svc-sel').value;
+    document.getElementById('sum-svc').textContent=s.split('·')[0].trim();
+    document.getElementById('sum-total').textContent=s.includes('·')?s.split('·')[1].trim():'—';
+    const d=document.getElementById('bk-date').value,sl=document.querySelector('.tslot.sel');
     document.getElementById('sum-time').textContent=(d||'TBD')+(sl?' · '+sl.textContent:'');
   }
-  step=Math.min(step+1,3); updStep();
+  step=Math.min(step+1,3);updStep();
 }
 function stepBack(){step=Math.max(step-1,0);updStep();}
 function selTime(btn){document.querySelectorAll('.tslot').forEach(t=>t.classList.remove('sel'));btn.classList.add('sel');}
-
-// Nav
 function toggleNav(){document.getElementById('mob-nav').classList.toggle('open');}
 function closeNav(){document.getElementById('mob-nav').classList.remove('open');}
+function handleSubmit(e){e.preventDefault();const b=e.target.querySelector('button[type=submit]');b.textContent='Message Sent ✓';b.style.background='var(--fl0)';b.disabled=true;}
 
-// Contact
-function handleSubmit(e){e.preventDefault();const b=e.target.querySelector('button[type=submit]');b.textContent='Message Sent ✓';b.style.background='var(--floor-2)';b.disabled=true;}
-
-// Init
 renderCards('all');
 renderSchedule();
 </script>
